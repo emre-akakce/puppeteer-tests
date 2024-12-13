@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+import fs from 'fs';
 
 const testRender = async (url) => {
   const browser = await puppeteer.launch();
@@ -27,8 +28,14 @@ const testRender = async (url) => {
   }
 };
 
+const writeResultsToFile = (results, config) => {
+  const fileName = `${config.name || 'test_results'}.json`;
+  fs.writeFileSync(fileName, JSON.stringify(results, null, 2));
+  console.log(`Results written to ${fileName}`);
+};
+
 const loadTest = async (url, config) => {
-  const { numRequests } = config;
+  const { numRequests, name } = config;
   const results = [];
 
   console.log(`Starting load test with ${numRequests} requests to ${url}...`);
@@ -62,10 +69,20 @@ const loadTest = async (url, config) => {
   console.log('Average Metrics:');
   console.log(`- Average DOM Content Loaded: ${averageDOMContentLoaded.toFixed(2)} ms`);
   console.log(`- Average Page Load: ${averageLoadEvent.toFixed(2)} ms`);
+
+  // Write results to a file
+  writeResultsToFile({
+    results,
+    averages: {
+      averageDOMContentLoaded: averageDOMContentLoaded.toFixed(2),
+      averageLoadEvent: averageLoadEvent.toFixed(2),
+    },
+  }, config);
 };
 
 const config = {
-  numRequests: 1, // Number of requests to make
+  numRequests: 10, // Number of requests to make
+  name: 'render_test_results_10', // Name of the output file
 };
 
 loadTest('http://localhost:3000', config);
