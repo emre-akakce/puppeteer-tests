@@ -1,7 +1,15 @@
 import QuickChart from 'quickchart-js';
 import fs from 'fs';
+import dotenv from 'dotenv';
 
-const generateChart = async (fileName) => {
+// Load environment variables
+dotenv.config();
+
+const generateChart = async () => {
+  const numRequests = process.env.NUM_REQUESTS || 10;
+  const frontendEndpoint = process.env.FRONTEND_ENDPOINT || 'http://localhost:3000';
+  const fileName = `render_test_results_${numRequests}.json`;
+
   const rawData = JSON.parse(fs.readFileSync(`./${fileName}`, 'utf-8'));
   const labels = rawData.results.map((r) => `Request ${r.requestNumber}`);
   const domContentLoadedTimes = rawData.results.map((r) => r.domContentLoaded);
@@ -37,5 +45,5 @@ const generateChart = async (fileName) => {
   console.log(`Graph saved as ${outputFileName}`);
 };
 
-// Replace 'render_test_results.json' with your actual file name
-generateChart('render_test_results_10.json');
+// Generate chart
+generateChart();

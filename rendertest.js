@@ -1,5 +1,9 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
 
 const testRender = async (url) => {
   const browser = await puppeteer.launch();
@@ -81,8 +85,10 @@ const loadTest = async (url, config) => {
 };
 
 const config = {
-  numRequests: 10, // Number of requests to make
-  name: 'render_test_results_10', // Name of the output file
+  numRequests: parseInt(process.env.NUM_REQUESTS, 10) || 20, // Number of requests to make
+  name: `render_test_results_${process.env.NUM_REQUESTS || 20}`, // Name of the output file
 };
 
-loadTest('http://localhost:3000', config);
+const frontendEndpoint = process.env.FRONTEND_ENDPOINT || 'http://localhost:3000';
+
+loadTest(frontendEndpoint, config);
