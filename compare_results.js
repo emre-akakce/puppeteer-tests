@@ -32,6 +32,19 @@ const compareAverages = (filePathA, filePathB) => {
     output.push(`  - DOM Content Loaded Difference: ${domDifference} ms`);
     output.push(`  - Page Load Difference: ${loadDifference} ms`);
 
+    // Determine which is faster
+    const fasterDOMContentLoaded = averagesA.averageDOMContentLoaded < averagesB.averageDOMContentLoaded ? 'File A' : 'File B';
+    const fasterDOMContentLoadedValue = Math.abs(domDifference);
+    const fasterDOMContentLoadedPercentage = ((fasterDOMContentLoadedValue / Math.max(averagesA.averageDOMContentLoaded, averagesB.averageDOMContentLoaded)) * 100).toFixed(2);
+
+    const fasterLoadEvent = averagesA.averageLoadEvent < averagesB.averageLoadEvent ? 'File A' : 'File B';
+    const fasterLoadEventValue = Math.abs(loadDifference);
+    const fasterLoadEventPercentage = ((fasterLoadEventValue / Math.max(averagesA.averageLoadEvent, averagesB.averageLoadEvent)) * 100).toFixed(2);
+
+    output.push(`Performance Comparison:`);
+    output.push(`  - Faster DOM Content Loaded: ${fasterDOMContentLoaded} by ${fasterDOMContentLoadedValue} ms (${fasterDOMContentLoadedPercentage}%)`);
+    output.push(`  - Faster Page Load: ${fasterLoadEvent} by ${fasterLoadEventValue} ms (${fasterLoadEventPercentage}%)`);
+
     // Print output to console
     console.log(output.join('\n'));
 
