@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "requestNumber": 24,
+      "domContentLoaded": 3456,
+      "loadEvent": 3640
+    }
+  ],
+  "averages": {
+    "averageDOMContentLoaded": "3456.00",
+    "averageLoadEvent": "3640.00"
+  }
+}

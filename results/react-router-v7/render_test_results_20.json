@@ -1,0 +1,108 @@
+{
+  "results": [
+    {
+      "requestNumber": 10,
+      "domContentLoaded": 1504,
+      "loadEvent": 2828
+    },
+    {
+      "requestNumber": 5,
+      "domContentLoaded": 1381,
+      "loadEvent": 2849
+    },
+    {
+      "requestNumber": 20,
+      "domContentLoaded": 2090,
+      "loadEvent": 3086
+    },
+    {
+      "requestNumber": 7,
+      "domContentLoaded": 760,
+      "loadEvent": 2501
+    },
+    {
+      "requestNumber": 1,
+      "domContentLoaded": 759,
+      "loadEvent": 2511
+    },
+    {
+      "requestNumber": 14,
+      "domContentLoaded": 1623,
+      "loadEvent": 3084
+    },
+    {
+      "requestNumber": 6,
+      "domContentLoaded": 1787,
+      "loadEvent": 3110
+    },
+    {
+      "requestNumber": 16,
+      "domContentLoaded": 1147,
+      "loadEvent": 2865
+    },
+    {
+      "requestNumber": 2,
+      "domContentLoaded": 760,
+      "loadEvent": 2766
+    },
+    {
+      "requestNumber": 12,
+      "domContentLoaded": 960,
+      "loadEvent": 2819
+    },
+    {
+      "requestNumber": 19,
+      "domContentLoaded": 761,
+      "loadEvent": 2490
+    },
+    {
+      "requestNumber": 15,
+      "domContentLoaded": 1292,
+      "loadEvent": 2847
+    },
+    {
+      "requestNumber": 13,
+      "domContentLoaded": 760,
+      "loadEvent": 2651
+    },
+    {
+      "requestNumber": 11,
+      "domContentLoaded": 1700,
+      "loadEvent": 3149
+    },
+    {
+      "requestNumber": 3,
+      "domContentLoaded": 1435,
+      "loadEvent": 2846
+    },
+    {
+      "requestNumber": 4,
+      "domContentLoaded": 2187,
+      "loadEvent": 3097
+    },
+    {
+      "requestNumber": 9,
+      "domContentLoaded": 758,
+      "loadEvent": 2548
+    },
+    {
+      "requestNumber": 17,
+      "domContentLoaded": 1904,
+      "loadEvent": 3110
+    },
+    {
+      "requestNumber": 18,
+      "domContentLoaded": 2015,
+      "loadEvent": 3107
+    },
+    {
+      "requestNumber": 8,
+      "domContentLoaded": 1570,
+      "loadEvent": 3032
+    }
+  ],
+  "averages": {
+    "averageDOMContentLoaded": "1357.65",
+    "averageLoadEvent": "2864.80"
+  }
+}

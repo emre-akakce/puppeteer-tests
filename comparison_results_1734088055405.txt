@@ -1,0 +1,13 @@
+Comparison of Averages:
+File A (./results/react-router-v7/render_test_results_30.json):
+  - Average DOM Content Loaded: 3738.80 ms
+  - Average Page Load: 7255.67 ms
+File B (./results/remix-run/render_test_results_30.json):
+  - Average DOM Content Loaded: 1492.73 ms
+  - Average Page Load: 5295.50 ms
+Differences:
+  - DOM Content Loaded Difference: -2246.07 ms
+  - Page Load Difference: -1960.17 ms
+Performance Comparison:
+  - Faster DOM Content Loaded: File B by 2246.07 ms (60.07%)
+  - Faster Page Load: File B by 1960.17 ms (27.02%)

@@ -1,0 +1,58 @@
+{
+  "results": [
+    {
+      "requestNumber": 10,
+      "domContentLoaded": 487,
+      "loadEvent": 1167
+    },
+    {
+      "requestNumber": 8,
+      "domContentLoaded": 464,
+      "loadEvent": 1219
+    },
+    {
+      "requestNumber": 7,
+      "domContentLoaded": 507,
+      "loadEvent": 1251
+    },
+    {
+      "requestNumber": 9,
+      "domContentLoaded": 571,
+      "loadEvent": 1320
+    },
+    {
+      "requestNumber": 5,
+      "domContentLoaded": 508,
+      "loadEvent": 1218
+    },
+    {
+      "requestNumber": 1,
+      "domContentLoaded": 548,
+      "loadEvent": 1309
+    },
+    {
+      "requestNumber": 2,
+      "domContentLoaded": 537,
+      "loadEvent": 1515
+    },
+    {
+      "requestNumber": 4,
+      "domContentLoaded": 482,
+      "loadEvent": 1395
+    },
+    {
+      "requestNumber": 3,
+      "domContentLoaded": 563,
+      "loadEvent": 1601
+    },
+    {
+      "requestNumber": 6,
+      "domContentLoaded": 549,
+      "loadEvent": 1560
+    }
+  ],
+  "averages": {
+    "averageDOMContentLoaded": "521.60",
+    "averageLoadEvent": "1355.50"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "results": [
+    {
+      "requestNumber": 22,
+      "domContentLoaded": 2589,
+      "loadEvent": 6896
+    },
+    {
+      "requestNumber": 6,
+      "domContentLoaded": 5784,
+      "loadEvent": 7600
+    },
+    {
+      "requestNumber": 8,
+      "domContentLoaded": 3373,
+      "loadEvent": 7147
+    },
+    {
+      "requestNumber": 7,
+      "domContentLoaded": 6050,
+      "loadEvent": 7610
+    },
+    {
+      "requestNumber": 19,
+      "domContentLoaded": 1234,
+      "loadEvent": 7734
+    },
+    {
+      "requestNumber": 23,
+      "domContentLoaded": 4967,
+      "loadEvent": 7284
+    },
+    {
+      "requestNumber": 13,
+      "domContentLoaded": 3012,
+      "loadEvent": 7092
+    },
+    {
+      "requestNumber": 14,
+      "domContentLoaded": 5456,
+      "loadEvent": 7599
+    },
+    {
+      "requestNumber": 24,
+      "domContentLoaded": 5246,
+      "loadEvent": 7565
+    },
+    {
+      "requestNumber": 5,
+      "domContentLoaded": 3571,
+      "loadEvent": 7303
+    },
+    {
+      "requestNumber": 20,
+      "domContentLoaded": 4037,
+      "loadEvent": 7298
+    },
+    {
+      "requestNumber": 1,
+      "domContentLoaded": 4215,
+      "loadEvent": 7306
+    },
+    {
+      "requestNumber": 16,
+      "domContentLoaded": 1616,
+      "loadEvent": 6404
+    },
+    {
+      "requestNumber": 9,
+      "domContentLoaded": 1855,
+      "loadEvent": 6667
+    },
+    {
+      "requestNumber": 3,
+      "domContentLoaded": 4596,
+      "loadEvent": 7249
+    },
+    {
+      "requestNumber": 28,
+      "domContentLoaded": 3156,
+      "loadEvent": 7079
+    },
+    {
+      "requestNumber": 10,
+      "domContentLoaded": 1726,
+      "loadEvent": 6581
+    },
+    {
+      "requestNumber": 4,
+      "domContentLoaded": 1988,
+      "loadEvent": 6693
+    },
+    {
+      "requestNumber": 26,
+      "domContentLoaded": 2879,
+      "loadEvent": 7019
+    },
+    {
+      "requestNumber": 12,
+      "domContentLoaded": 2729,
+      "loadEvent": 6948
+    },
+    {
+      "requestNumber": 21,
+      "domContentLoaded": 5109,
+      "loadEvent": 7488
+    },
+    {
+      "requestNumber": 29,
+      "domContentLoaded": 2404,
+      "loadEvent": 6743
+    },
+    {
+      "requestNumber": 2,
+      "domContentLoaded": 4481,
+      "loadEvent": 7275
+    },
+    {
+      "requestNumber": 17,
+      "domContentLoaded": 2300,
+      "loadEvent": 6684
+    },
+    {
+      "requestNumber": 25,
+      "domContentLoaded": 1634,
+      "loadEvent": 6459
+    },
+    {
+      "requestNumber": 15,
+      "domContentLoaded": 4776,
+      "loadEvent": 8146
+    },
+    {
+      "requestNumber": 18,
+      "domContentLoaded": 5890,
+      "loadEvent": 8113
+    },
+    {
+      "requestNumber": 11,
+      "domContentLoaded": 5616,
+      "loadEvent": 8209
+    },
+    {
+      "requestNumber": 30,
+      "domContentLoaded": 5995,
+      "loadEvent": 8191
+    },
+    {
+      "requestNumber": 27,
+      "domContentLoaded": 3880,
+      "loadEvent": 7288
+    }
+  ],
+  "averages": {
+    "averageDOMContentLoaded": "3738.80",
+    "averageLoadEvent": "7255.67"
+  }
+}
