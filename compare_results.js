@@ -15,30 +15,31 @@ const compareAverages = (filePathA, filePathB) => {
 
     output.push(`Comparison of Averages:`);
     output.push(`File A (${filePathA}):`);
-    output.push(`  - Average DOM Content Loaded: ${averagesA.averageDOMContentLoaded} ms`);
-    output.push(`  - Average Page Load: ${averagesA.averageLoadEvent} ms`);
-    output.push(`  - Average FCP: ${averagesA.averageFCP} ms`);
-    output.push(`  - Average LCP: ${averagesA.averageLCP} ms`);
-    output.push(`  - Average CLS: ${averagesA.averageCLS}`);
+    output.push(`  - Average DOM Content Loaded: ${averagesA.averageDOMContentLoaded || 'N/A'} ms`);
+    output.push(`  - Average Page Load: ${averagesA.averageLoadEvent || 'N/A'} ms`);
+    output.push(`  - Average FCP: ${averagesA.averageFCP || 'N/A'} ms`);
+    output.push(`  - Average LCP: ${averagesA.averageLCP || 'N/A'} ms`);
+    output.push(`  - Average CLS: ${averagesA.averageCLS || 'N/A'}`);
 
     output.push(`File B (${filePathB}):`);
-    output.push(`  - Average DOM Content Loaded: ${averagesB.averageDOMContentLoaded} ms`);
-    output.push(`  - Average Page Load: ${averagesB.averageLoadEvent} ms`);
-    output.push(`  - Average FCP: ${averagesB.averageFCP} ms`);
-    output.push(`  - Average LCP: ${averagesB.averageLCP} ms`);
-    output.push(`  - Average CLS: ${averagesB.averageCLS}`);
+    output.push(`  - Average DOM Content Loaded: ${averagesB.averageDOMContentLoaded || 'N/A'} ms`);
+    output.push(`  - Average Page Load: ${averagesB.averageLoadEvent || 'N/A'} ms`);
+    output.push(`  - Average FCP: ${averagesB.averageFCP || 'N/A'} ms`);
+    output.push(`  - Average LCP: ${averagesB.averageLCP || 'N/A'} ms`);
+    output.push(`  - Average CLS: ${averagesB.averageCLS || 'N/A'}`);
+
+    // Helper function to calculate difference safely
+    const calculateDifference = (a, b) => {
+      if (a == null || b == null) return 'N/A';
+      return (b - a).toFixed(2);
+    };
 
     // Calculate differences
-    const domDifference =
-      (averagesB.averageDOMContentLoaded - averagesA.averageDOMContentLoaded).toFixed(2);
-    const loadDifference =
-      (averagesB.averageLoadEvent - averagesA.averageLoadEvent).toFixed(2);
-    const fcpDifference =
-      (averagesB.averageFCP - averagesA.averageFCP).toFixed(2);
-    const lcpDifference =
-      (averagesB.averageLCP - averagesA.averageLCP).toFixed(2);
-    const clsDifference =
-      (averagesB.averageCLS - averagesA.averageCLS).toFixed(4);
+    const domDifference = calculateDifference(averagesA.averageDOMContentLoaded, averagesB.averageDOMContentLoaded);
+    const loadDifference = calculateDifference(averagesA.averageLoadEvent, averagesB.averageLoadEvent);
+    const fcpDifference = calculateDifference(averagesA.averageFCP, averagesB.averageFCP);
+    const lcpDifference = calculateDifference(averagesA.averageLCP, averagesB.averageLCP);
+    const clsDifference = calculateDifference(averagesA.averageCLS, averagesB.averageCLS);
 
     output.push(`Differences:`);
     output.push(`  - DOM Content Loaded Difference: ${domDifference} ms`);
@@ -47,28 +48,21 @@ const compareAverages = (filePathA, filePathB) => {
     output.push(`  - LCP Difference: ${lcpDifference} ms`);
     output.push(`  - CLS Difference: ${clsDifference}`);
 
-    // Determine which is faster
-    const fasterDOMContentLoaded = averagesA.averageDOMContentLoaded < averagesB.averageDOMContentLoaded ? 'File A' : 'File B';
-    const fasterDOMContentLoadedValue = Math.abs(domDifference);
-    const fasterDOMContentLoadedPercentage = ((fasterDOMContentLoadedValue / Math.max(averagesA.averageDOMContentLoaded, averagesB.averageDOMContentLoaded)) * 100).toFixed(2);
-
-    const fasterLoadEvent = averagesA.averageLoadEvent < averagesB.averageLoadEvent ? 'File A' : 'File B';
-    const fasterLoadEventValue = Math.abs(loadDifference);
-    const fasterLoadEventPercentage = ((fasterLoadEventValue / Math.max(averagesA.averageLoadEvent, averagesB.averageLoadEvent)) * 100).toFixed(2);
-
-    const fasterFCP = averagesA.averageFCP < averagesB.averageFCP ? 'File A' : 'File B';
-    const fasterFCPValue = Math.abs(fcpDifference);
-    const fasterFCPPercentage = ((fasterFCPValue / Math.max(averagesA.averageFCP, averagesB.averageFCP)) * 100).toFixed(2);
-
-    const fasterLCP = averagesA.averageLCP < averagesB.averageLCP ? 'File A' : 'File B';
-    const fasterLCPValue = Math.abs(lcpDifference);
-    const fasterLCPPercentage = ((fasterLCPValue / Math.max(averagesA.averageLCP, averagesB.averageLCP)) * 100).toFixed(2);
+    // Helper function to determine which file is faster
+    const determineFaster = (a, b, metric) => {
+      if (a == null || b == null) return 'Cannot determine (missing data)';
+      const faster = a < b ? filePathA : filePathB;
+      const value = Math.abs(b - a).toFixed(2);
+      const percentage = ((value / Math.max(a, b)) * 100).toFixed(2);
+      return `${faster} by ${value} (${percentage}%)`;
+    };
 
     output.push(`Performance Comparison:`);
-    output.push(`  - Faster DOM Content Loaded: ${fasterDOMContentLoaded} by ${fasterDOMContentLoadedValue} ms (${fasterDOMContentLoadedPercentage}%)`);
-    output.push(`  - Faster Page Load: ${fasterLoadEvent} by ${fasterLoadEventValue} ms (${fasterLoadEventPercentage}%)`);
-    output.push(`  - Faster FCP: ${fasterFCP} by ${fasterFCPValue} ms (${fasterFCPPercentage}%)`);
-    output.push(`  - Faster LCP: ${fasterLCP} by ${fasterLCPValue} ms (${fasterLCPPercentage}%)`);
+    output.push(`  - Faster DOM Content Loaded: ${determineFaster(averagesA.averageDOMContentLoaded, averagesB.averageDOMContentLoaded)}`);
+    output.push(`  - Faster Page Load: ${determineFaster(averagesA.averageLoadEvent, averagesB.averageLoadEvent)}`);
+    output.push(`  - Faster FCP: ${determineFaster(averagesA.averageFCP, averagesB.averageFCP)}`);
+    output.push(`  - Faster LCP: ${determineFaster(averagesA.averageLCP, averagesB.averageLCP)}`);
+    output.push(`  - Lower CLS: ${determineFaster(averagesA.averageCLS, averagesB.averageCLS)}`);
 
     // Print output to console
     console.log(output.join('\n'));

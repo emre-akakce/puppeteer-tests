@@ -1,0 +1,25 @@
+Comparison of Averages:
+File A (./results/v2/react-router-v7/render_test_results_30.json):
+  - Average DOM Content Loaded: 3991.70 ms
+  - Average Page Load: 6901.90 ms
+  - Average FCP: 4039.84 ms
+  - Average LCP: 0.00 ms
+  - Average CLS: 0.0000
+File B (./results/v2/remix-run/render_test_results_30.json):
+  - Average DOM Content Loaded: 1760.00 ms
+  - Average Page Load: 8205.08 ms
+  - Average FCP: 1582.35 ms
+  - Average LCP: 0.00 ms
+  - Average CLS: 0.0000
+Differences:
+  - DOM Content Loaded Difference: -2231.70 ms
+  - Page Load Difference: 1303.18 ms
+  - FCP Difference: -2457.49 ms
+  - LCP Difference: 0.00 ms
+  - CLS Difference: 0.00
+Performance Comparison:
+  - Faster DOM Content Loaded: ./results/v2/remix-run/render_test_results_30.json by 2231.70 (55.91%)
+  - Faster Page Load: ./results/v2/react-router-v7/render_test_results_30.json by 1303.18 (15.88%)
+  - Faster FCP: ./results/v2/remix-run/render_test_results_30.json by 2457.49 (60.83%)
+  - Faster LCP: ./results/v2/remix-run/render_test_results_30.json by 0.00 (NaN%)
+  - Lower CLS: ./results/v2/remix-run/render_test_results_30.json by 0.00 (NaN%)
