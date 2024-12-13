@@ -10,25 +10,35 @@ const compareAverages = (filePathA, filePathB) => {
     const averagesA = dataA.averages;
     const averagesB = dataB.averages;
 
-    // Log comparison
-    console.log(`Comparison of Averages:`);
-    console.log(`File A (${filePathA}):`);
-    console.log(`  - Average DOM Content Loaded: ${averagesA.averageDOMContentLoaded} ms`);
-    console.log(`  - Average Page Load: ${averagesA.averageLoadEvent} ms`);
+    // Prepare comparison output
+    const output = [];
 
-    console.log(`File B (${filePathB}):`);
-    console.log(`  - Average DOM Content Loaded: ${averagesB.averageDOMContentLoaded} ms`);
-    console.log(`  - Average Page Load: ${averagesB.averageLoadEvent} ms`);
+    output.push(`Comparison of Averages:`);
+    output.push(`File A (${filePathA}):`);
+    output.push(`  - Average DOM Content Loaded: ${averagesA.averageDOMContentLoaded} ms`);
+    output.push(`  - Average Page Load: ${averagesA.averageLoadEvent} ms`);
 
-    // Calculate and log differences
+    output.push(`File B (${filePathB}):`);
+    output.push(`  - Average DOM Content Loaded: ${averagesB.averageDOMContentLoaded} ms`);
+    output.push(`  - Average Page Load: ${averagesB.averageLoadEvent} ms`);
+
+    // Calculate differences
     const domDifference =
       (averagesB.averageDOMContentLoaded - averagesA.averageDOMContentLoaded).toFixed(2);
     const loadDifference =
       (averagesB.averageLoadEvent - averagesA.averageLoadEvent).toFixed(2);
 
-    console.log(`Differences:`);
-    console.log(`  - DOM Content Loaded Difference: ${domDifference} ms`);
-    console.log(`  - Page Load Difference: ${loadDifference} ms`);
+    output.push(`Differences:`);
+    output.push(`  - DOM Content Loaded Difference: ${domDifference} ms`);
+    output.push(`  - Page Load Difference: ${loadDifference} ms`);
+
+    // Print output to console
+    console.log(output.join('\n'));
+
+    // Write output to a file
+    const resultFileName = `comparison_results_${Date.now()}.txt`;
+    fs.writeFileSync(resultFileName, output.join('\n'));
+    console.log(`Comparison results written to ${resultFileName}`);
   } catch (error) {
     console.error(`Error comparing files: ${error.message}`);
   }
