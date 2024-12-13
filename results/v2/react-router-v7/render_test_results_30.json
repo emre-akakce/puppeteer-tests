@@ -1,0 +1,251 @@
+{
+  "results": [
+    {
+      "requestNumber": 22,
+      "domContentLoaded": 4265,
+      "loadEvent": 6980,
+      "firstContentfulPaint": 4312.60000000149,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 21,
+      "domContentLoaded": 5561,
+      "loadEvent": 6982,
+      "firstContentfulPaint": 5605.199999999255,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 11,
+      "domContentLoaded": 3833,
+      "loadEvent": 7028,
+      "firstContentfulPaint": 3883.900000002235,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 28,
+      "domContentLoaded": 3101,
+      "loadEvent": 6699,
+      "firstContentfulPaint": 3146.39999999851,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 4,
+      "domContentLoaded": 3027,
+      "loadEvent": 6571,
+      "firstContentfulPaint": 3072.099999997765,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 10,
+      "domContentLoaded": 5204,
+      "loadEvent": 7074,
+      "firstContentfulPaint": 5284.599999997765,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 29,
+      "domContentLoaded": 3289,
+      "loadEvent": 6690,
+      "firstContentfulPaint": 3348.89999999851,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 6,
+      "domContentLoaded": 3303,
+      "loadEvent": 6870,
+      "firstContentfulPaint": 3353,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 24,
+      "domContentLoaded": 3194,
+      "loadEvent": 6755,
+      "firstContentfulPaint": 3232.2000000029802,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 14,
+      "domContentLoaded": 5441,
+      "loadEvent": 7008,
+      "firstContentfulPaint": 5486.10000000149,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 20,
+      "domContentLoaded": 5109,
+      "loadEvent": 7684,
+      "firstContentfulPaint": 5146.60000000149,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 25,
+      "domContentLoaded": 2778,
+      "loadEvent": 6541,
+      "firstContentfulPaint": 2822.300000000745,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 15,
+      "domContentLoaded": 3690,
+      "loadEvent": 6957,
+      "firstContentfulPaint": 3737.2999999970198,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 17,
+      "domContentLoaded": 3671,
+      "loadEvent": 6931,
+      "firstContentfulPaint": 3735.300000000745,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 5,
+      "domContentLoaded": 3926,
+      "loadEvent": 7017,
+      "firstContentfulPaint": 3971.89999999851,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 16,
+      "domContentLoaded": 4440,
+      "loadEvent": 6983,
+      "firstContentfulPaint": 4491.900000002235,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 27,
+      "domContentLoaded": 5239,
+      "loadEvent": 7064,
+      "firstContentfulPaint": 5283,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 18,
+      "domContentLoaded": 4794,
+      "loadEvent": 7223,
+      "firstContentfulPaint": 4841.300000000745,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 2,
+      "domContentLoaded": 2082,
+      "loadEvent": 5600,
+      "firstContentfulPaint": 2139.7999999970198,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 30,
+      "domContentLoaded": 3450,
+      "loadEvent": 7468,
+      "firstContentfulPaint": 3502,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 1,
+      "domContentLoaded": 1224,
+      "loadEvent": 3565,
+      "firstContentfulPaint": 1265.300000000745,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 19,
+      "domContentLoaded": 4927,
+      "loadEvent": 7711,
+      "firstContentfulPaint": 4975.699999999255,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 9,
+      "domContentLoaded": 4800,
+      "loadEvent": 7254,
+      "firstContentfulPaint": 4846.29999999702,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 12,
+      "domContentLoaded": 4019,
+      "loadEvent": 6978,
+      "firstContentfulPaint": 4062,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 8,
+      "domContentLoaded": 4119,
+      "loadEvent": 6973,
+      "firstContentfulPaint": 4171.300000000745,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 13,
+      "domContentLoaded": 4890,
+      "loadEvent": 7196,
+      "firstContentfulPaint": 4914,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 7,
+      "domContentLoaded": 3546,
+      "loadEvent": 7424,
+      "firstContentfulPaint": 3594.199999999255,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 3,
+      "domContentLoaded": 2877,
+      "loadEvent": 6916,
+      "firstContentfulPaint": 2913.7000000029802,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 26,
+      "domContentLoaded": 4604,
+      "loadEvent": 7891,
+      "firstContentfulPaint": 4658.10000000149,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 23,
+      "domContentLoaded": 5348,
+      "loadEvent": 7024,
+      "firstContentfulPaint": 5398.300000000745,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    }
+  ],
+  "averages": {
+    "averageDOMContentLoaded": "3991.70",
+    "averageLoadEvent": "6901.90",
+    "averageFCP": "4039.84",
+    "averageLCP": "0.00",
+    "averageCLS": "0.0000"
+  }
+}

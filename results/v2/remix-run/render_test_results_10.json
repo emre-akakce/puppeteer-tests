@@ -1,0 +1,91 @@
+{
+  "results": [
+    {
+      "requestNumber": 2,
+      "domContentLoaded": 387,
+      "loadEvent": 1134,
+      "firstContentfulPaint": 421.6000000014901,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 7,
+      "domContentLoaded": 381,
+      "loadEvent": 1222,
+      "firstContentfulPaint": 407.9000000022352,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 1,
+      "domContentLoaded": 459,
+      "loadEvent": 1320,
+      "firstContentfulPaint": 504.80000000074506,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 10,
+      "domContentLoaded": 453,
+      "loadEvent": 1324,
+      "firstContentfulPaint": 489,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 3,
+      "domContentLoaded": 406,
+      "loadEvent": 1294,
+      "firstContentfulPaint": 434.70000000298023,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 9,
+      "domContentLoaded": 412,
+      "loadEvent": 1233,
+      "firstContentfulPaint": 446.9000000022352,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 6,
+      "domContentLoaded": 432,
+      "loadEvent": 1319,
+      "firstContentfulPaint": 474.8999999985099,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 8,
+      "domContentLoaded": 415,
+      "loadEvent": 1425,
+      "firstContentfulPaint": 426.20000000298023,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 5,
+      "domContentLoaded": 475,
+      "loadEvent": 1397,
+      "firstContentfulPaint": 515.8000000007451,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 4,
+      "domContentLoaded": 384,
+      "loadEvent": 1153,
+      "firstContentfulPaint": 422,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    }
+  ],
+  "averages": {
+    "averageDOMContentLoaded": "420.40",
+    "averageLoadEvent": "1282.10",
+    "averageFCP": "454.38",
+    "averageLCP": "0.00",
+    "averageCLS": "0.0000"
+  }
+}

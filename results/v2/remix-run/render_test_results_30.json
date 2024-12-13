@@ -1,0 +1,115 @@
+{
+  "results": [
+    {
+      "requestNumber": 7,
+      "domContentLoaded": 4230,
+      "loadEvent": 4234,
+      "firstContentfulPaint": 0,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 6,
+      "domContentLoaded": 965,
+      "loadEvent": 7822,
+      "firstContentfulPaint": 917.3999999985099,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 19,
+      "domContentLoaded": 1272,
+      "loadEvent": 8082,
+      "firstContentfulPaint": 1150,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 18,
+      "domContentLoaded": 1213,
+      "loadEvent": 8100,
+      "firstContentfulPaint": 1091.5999999977648,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 22,
+      "domContentLoaded": 1649,
+      "loadEvent": 8476,
+      "firstContentfulPaint": 2496.099999997765,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 30,
+      "domContentLoaded": 2159,
+      "loadEvent": 9028,
+      "firstContentfulPaint": 2985,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 3,
+      "domContentLoaded": 1360,
+      "loadEvent": 8657,
+      "firstContentfulPaint": 1171.800000000745,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 25,
+      "domContentLoaded": 1365,
+      "loadEvent": 8444,
+      "firstContentfulPaint": 1156.699999999255,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 14,
+      "domContentLoaded": 1835,
+      "loadEvent": 9067,
+      "firstContentfulPaint": 3444.2000000029802,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 2,
+      "domContentLoaded": 1214,
+      "loadEvent": 8199,
+      "firstContentfulPaint": 963.8999999985099,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 27,
+      "domContentLoaded": 1427,
+      "loadEvent": 8371,
+      "firstContentfulPaint": 1402.7999999970198,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 5,
+      "domContentLoaded": 2218,
+      "loadEvent": 9057,
+      "firstContentfulPaint": 2006.8999999985099,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    },
+    {
+      "requestNumber": 29,
+      "domContentLoaded": 1973,
+      "loadEvent": 9129,
+      "firstContentfulPaint": 1784.199999999255,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0
+    }
+  ],
+  "averages": {
+    "averageDOMContentLoaded": "1760.00",
+    "averageLoadEvent": "8205.08",
+    "averageFCP": "1582.35",
+    "averageLCP": "0.00",
+    "averageCLS": "0.0000"
+  }
+}

@@ -13,17 +13,41 @@ const testRender = async (url) => {
     // Start navigation and wait for the page to load
     await page.goto(url, { waitUntil: 'load', timeout: 10000 });
 
-    // Evaluate performance timing
-    const performanceTiming = await page.evaluate(() => {
+    // Evaluate performance timing and metrics
+    const performanceMetrics = await page.evaluate(() => {
       const { navigationStart, domContentLoadedEventEnd, loadEventEnd } = window.performance.timing;
+
+      // Get paint metrics (FCP, LCP)
+      const paintEntries = performance.getEntriesByType('paint');
+      const firstContentfulPaint = paintEntries.find(e => e.name === 'first-contentful-paint')?.startTime || 0;
+
+      // Get Largest Contentful Paint (LCP)
+      let largestContentfulPaint = 0;
+      new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        largestContentfulPaint = entries[entries.length - 1].startTime;
+      }).observe({ type: 'largest-contentful-paint', buffered: true });
+
+      // Get Cumulative Layout Shift (CLS)
+      let cumulativeLayoutShift = 0;
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (!entry.hadRecentInput) {
+            cumulativeLayoutShift += entry.value;
+          }
+        }
+      }).observe({ type: 'layout-shift', buffered: true });
+
       return {
-        navigationStart,
         domContentLoaded: domContentLoadedEventEnd - navigationStart,
         loadEvent: loadEventEnd - navigationStart,
+        firstContentfulPaint,
+        largestContentfulPaint,
+        cumulativeLayoutShift,
       };
     });
 
-    return performanceTiming;
+    return performanceMetrics;
   } catch (error) {
     console.error(`Failed to load page at ${url}:`, error.message);
     return null;
@@ -52,6 +76,9 @@ const loadTest = async (url, config) => {
         requestNumber: i + 1,
         domContentLoaded: result.domContentLoaded,
         loadEvent: result.loadEvent,
+        firstContentfulPaint: result.firstContentfulPaint,
+        largestContentfulPaint: result.largestContentfulPaint,
+        cumulativeLayoutShift: result.cumulativeLayoutShift,
       });
     }
   });
@@ -61,7 +88,7 @@ const loadTest = async (url, config) => {
   console.log('Load test complete. Results:');
   results.forEach((result) => {
     console.log(
-      `Request ${result.requestNumber}: DOM Content Loaded: ${result.domContentLoaded} ms, Page Load: ${result.loadEvent} ms`
+      `Request ${result.requestNumber}: DOM Content Loaded: ${result.domContentLoaded} ms, Page Load: ${result.loadEvent} ms, FCP: ${result.firstContentfulPaint} ms, LCP: ${result.largestContentfulPaint} ms, CLS: ${result.cumulativeLayoutShift}`
     );
   });
 
@@ -69,10 +96,19 @@ const loadTest = async (url, config) => {
     results.reduce((sum, r) => sum + r.domContentLoaded, 0) / results.length;
   const averageLoadEvent =
     results.reduce((sum, r) => sum + r.loadEvent, 0) / results.length;
+  const averageFCP =
+    results.reduce((sum, r) => sum + r.firstContentfulPaint, 0) / results.length;
+  const averageLCP =
+    results.reduce((sum, r) => sum + r.largestContentfulPaint, 0) / results.length;
+  const averageCLS =
+    results.reduce((sum, r) => sum + r.cumulativeLayoutShift, 0) / results.length;
 
   console.log('Average Metrics:');
   console.log(`- Average DOM Content Loaded: ${averageDOMContentLoaded.toFixed(2)} ms`);
   console.log(`- Average Page Load: ${averageLoadEvent.toFixed(2)} ms`);
+  console.log(`- Average FCP: ${averageFCP.toFixed(2)} ms`);
+  console.log(`- Average LCP: ${averageLCP.toFixed(2)} ms`);
+  console.log(`- Average CLS: ${averageCLS.toFixed(4)}`);
 
   // Write results to a file
   writeResultsToFile({
@@ -80,6 +116,9 @@ const loadTest = async (url, config) => {
     averages: {
       averageDOMContentLoaded: averageDOMContentLoaded.toFixed(2),
       averageLoadEvent: averageLoadEvent.toFixed(2),
+      averageFCP: averageFCP.toFixed(2),
+      averageLCP: averageLCP.toFixed(2),
+      averageCLS: averageCLS.toFixed(4),
     },
   }, config);
 };

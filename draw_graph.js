@@ -14,6 +14,9 @@ const generateChart = async () => {
   const labels = rawData.results.map((r) => `Request ${r.requestNumber}`);
   const domContentLoadedTimes = rawData.results.map((r) => r.domContentLoaded);
   const loadEventTimes = rawData.results.map((r) => r.loadEvent);
+  const fcpTimes = rawData.results.map((r) => r.firstContentfulPaint);
+  const lcpTimes = rawData.results.map((r) => r.largestContentfulPaint);
+  const clsValues = rawData.results.map((r) => r.cumulativeLayoutShift);
 
   const chart = new QuickChart();
   chart.setConfig({
@@ -31,6 +34,24 @@ const generateChart = async () => {
           label: 'Page Load Time (ms)',
           data: loadEventTimes,
           borderColor: 'rgba(255, 99, 132, 1)',
+          fill: false,
+        },
+        {
+          label: 'First Contentful Paint (ms)',
+          data: fcpTimes,
+          borderColor: 'rgba(54, 162, 235, 1)',
+          fill: false,
+        },
+        {
+          label: 'Largest Contentful Paint (ms)',
+          data: lcpTimes,
+          borderColor: 'rgba(153, 102, 255, 1)',
+          fill: false,
+        },
+        {
+          label: 'Cumulative Layout Shift',
+          data: clsValues,
+          borderColor: 'rgba(255, 206, 86, 1)',
           fill: false,
         },
       ],
